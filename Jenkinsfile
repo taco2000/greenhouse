@@ -1,19 +1,19 @@
 pipeline {
     stages {
-        stage "Checkout" {
+        stage ("Checkout") {
             steps {
                 git url: "git@github.com:taco2000/greenhouse.git"
             }
         }
 
-        stage "Compile" {
+        stage ("Compile") {
             steps {
                 sh "mvn clean compile"
             }
             
         }
 
-        stage "Unit Test" {
+        stage ("Unit Test") {
             steps {
                 sh "mvn test"
             }
